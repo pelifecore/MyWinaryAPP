@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo"
+    tools:context=".MainActivity">
+
+    <!-- 1. TEXTO DE BIENVENIDA -->
+    <TextView
+        android:id="@+id/textoBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/texto_bienvenida"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 2. BOTÓN PRINCIPAL -->
+    <Button
+        android:id="@+id/botonPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/texto_boton_principal"
+        android:backgroundTint="@color/color_primario"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoBienvenida" />
+
+    <!-- 3. LINEAR LAYOUT (Organiza elementos en una sola dirección) -->
+    <LinearLayout
+        android:id="@+id/miLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonPrincipal">
+
+        <!-- Aquí se corrigió la simetría agregando paddingStart="0dp" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
+            android:text="@string/texto_linear_1"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_linear_2"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!-- 4. TABLE LAYOUT (Organiza elementos en formato de tabla) -->
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miLinearLayout">
+
+        <!-- Fila 1 de la tabla -->
+        <TableRow android:padding="10dp">
+            <!-- Aquí se corrigió la simetría agregando paddingStart="0dp" -->
+            <TextView
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:text="@string/texto_tabla_f1_c1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:text="@string/texto_tabla_f1_c2"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <!-- Fila 2 de la tabla con un botón dentro -->
+        <TableRow android:padding="10dp">
+            <!-- Aquí se corrigió la simetría agregando paddingStart="0dp" -->
+            <TextView
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:text="@string/texto_tabla_f2_c1"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_boton_tabla"
+                android:backgroundTint="@color/color_secundario"
+                android:textColor="@color/black"/>
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

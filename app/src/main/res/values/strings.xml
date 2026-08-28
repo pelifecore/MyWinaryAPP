@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="texto_bienvenida">¡Bienvenido a mi Actividad!</string>
+    <string name="texto_boton_principal">Botón Principal</string>
+    <string name="texto_linear_1">Elemento Linear 1</string>
+    <string name="texto_linear_2">Elemento Linear 2</string>
+    <string name="texto_tabla_f1_c1">Fila 1 - Col 1</string>
+    <string name="texto_tabla_f1_c2">Fila 1 - Col 2</string>
+    <string name="texto_tabla_f2_c1">Fila 2 - Col 1</string>
+    <string name="texto_boton_tabla">Botón Tabla</string>
+</resources>
