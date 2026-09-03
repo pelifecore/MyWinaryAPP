@@ -8,4 +8,5 @@
     <string name="texto_tabla_f1_c2">Fila 1 - Col 2</string>
     <string name="texto_tabla_f2_c1">Fila 2 - Col 1</string>
     <string name="texto_boton_tabla">Botón Tabla</string>
+    <string name="btn_descargar">Descargar Imagen</string>
 </resources>
